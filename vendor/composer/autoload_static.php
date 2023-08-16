@@ -105,7 +105,6 @@ class ComposerStaticInit621d342c55457a8a23f4c568f20fd8ce
             'Psr\\Http\\Client\\' => 16,
             'Psr\\EventDispatcher\\' => 20,
             'Psr\\Container\\' => 14,
-            'Psr\\Clock\\' => 10,
             'PhpParser\\' => 10,
             'PhpOption\\' => 10,
         ),
@@ -368,10 +367,6 @@ class ComposerStaticInit621d342c55457a8a23f4c568f20fd8ce
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
-        ),
-        'Psr\\Clock\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/clock/src',
         ),
         'PhpParser\\' => 
         array (
@@ -2361,7 +2356,6 @@ class ComposerStaticInit621d342c55457a8a23f4c568f20fd8ce
         'Illuminate\\Process\\Pool' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Process/Pool.php',
         'Illuminate\\Process\\ProcessPoolResults' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Process/ProcessPoolResults.php',
         'Illuminate\\Process\\ProcessResult' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Process/ProcessResult.php',
-        'Illuminate\\Queue\\Attributes\\WithoutRelations' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/Attributes/WithoutRelations.php',
         'Illuminate\\Queue\\BeanstalkdQueue' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/BeanstalkdQueue.php',
         'Illuminate\\Queue\\CallQueuedClosure' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/CallQueuedClosure.php',
         'Illuminate\\Queue\\CallQueuedHandler' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Queue/CallQueuedHandler.php',
@@ -2755,7 +2749,6 @@ class ComposerStaticInit621d342c55457a8a23f4c568f20fd8ce
         'Laravel\\Prompts\\Concerns\\Fallback' => __DIR__ . '/..' . '/laravel/prompts/src/Concerns/Fallback.php',
         'Laravel\\Prompts\\Concerns\\Termwind' => __DIR__ . '/..' . '/laravel/prompts/src/Concerns/Termwind.php',
         'Laravel\\Prompts\\Concerns\\Themes' => __DIR__ . '/..' . '/laravel/prompts/src/Concerns/Themes.php',
-        'Laravel\\Prompts\\Concerns\\Truncation' => __DIR__ . '/..' . '/laravel/prompts/src/Concerns/Truncation.php',
         'Laravel\\Prompts\\Concerns\\TypedValue' => __DIR__ . '/..' . '/laravel/prompts/src/Concerns/TypedValue.php',
         'Laravel\\Prompts\\ConfirmPrompt' => __DIR__ . '/..' . '/laravel/prompts/src/ConfirmPrompt.php',
         'Laravel\\Prompts\\Key' => __DIR__ . '/..' . '/laravel/prompts/src/Key.php',
@@ -4670,7 +4663,6 @@ class ComposerStaticInit621d342c55457a8a23f4c568f20fd8ce
         'PhpParser\\PrettyPrinterAbstract' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/PrettyPrinterAbstract.php',
         'PhpParser\\PrettyPrinter\\Standard' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/PrettyPrinter/Standard.php',
         'PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
-        'Psr\\Clock\\ClockInterface' => __DIR__ . '/..' . '/psr/clock/src/ClockInterface.php',
         'Psr\\Container\\ContainerExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerExceptionInterface.php',
         'Psr\\Container\\ContainerInterface' => __DIR__ . '/..' . '/psr/container/src/ContainerInterface.php',
         'Psr\\Container\\NotFoundExceptionInterface' => __DIR__ . '/..' . '/psr/container/src/NotFoundExceptionInterface.php',

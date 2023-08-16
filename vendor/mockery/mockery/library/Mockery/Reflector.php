@@ -259,7 +259,7 @@ class Reflector
 
             $intersect = array_intersect(self::TRAVERSABLE_ARRAY, $types);
             if (self::TRAVERSABLE_ARRAY === $intersect) {
-                $types = array_merge(self::ITERABLE, array_diff($types, self::TRAVERSABLE_ARRAY));
+                $types = self::ITERABLE + array_diff($types, self::TRAVERSABLE_ARRAY);
             }
 
             return implode(

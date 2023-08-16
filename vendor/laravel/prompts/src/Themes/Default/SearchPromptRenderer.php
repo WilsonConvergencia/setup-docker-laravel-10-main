@@ -45,8 +45,7 @@ class SearchPromptRenderer extends Renderer
                     $this->cyan($this->truncate($prompt->label, $prompt->terminal()->cols() - 6)),
                     $this->valueWithCursorAndSearchIcon($prompt, $maxWidth),
                     $this->renderOptions($prompt),
-                )
-                ->hint($prompt->hint),
+                ),
 
             default => $this
                 ->box(
@@ -54,12 +53,8 @@ class SearchPromptRenderer extends Renderer
                     $prompt->valueWithCursor($maxWidth),
                     $this->renderOptions($prompt),
                 )
-                ->when(
-                    $prompt->hint,
-                    fn () => $this->hint($prompt->hint),
-                    fn () => $this->newLine() // Space for errors
-                )
                 ->spaceForDropdown($prompt)
+                ->newLine(), // Space for errors
         };
     }
 

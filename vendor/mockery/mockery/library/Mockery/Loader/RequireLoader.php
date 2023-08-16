@@ -15,31 +15,16 @@ use Mockery\Loader\Loader;
 
 class RequireLoader implements Loader
 {
-    /**
-     * @var string
-     */
     protected $path;
-
-    /**
-     * @var string
-     */
-    protected $lastPath = '';
 
     public function __construct($path = null)
     {
         $this->path = realpath($path) ?: sys_get_temp_dir();
-
-        register_shutdown_function([$this, '__destruct']);
     }
 
     public function __destruct()
     {
-        $files = array_diff(
-            glob($this->path . DIRECTORY_SEPARATOR . 'Mockery_*.php')?:[],
-            [$this->lastPath]
-        );
-
-        foreach ($files as $file) {
+        foreach (glob($this->path . DIRECTORY_SEPARATOR . 'Mockery_*.php') as $file) {
             @unlink($file);
         }
     }
@@ -50,12 +35,10 @@ class RequireLoader implements Loader
             return;
         }
 
-        $this->lastPath = sprintf('%s%s%s.php', $this->path, DIRECTORY_SEPARATOR, uniqid('Mockery_'));
+        $fileName = sprintf('%s%s%s.php', $this->path, DIRECTORY_SEPARATOR, uniqid('Mockery_'));
 
-        file_put_contents($this->lastPath, $definition->getCode());
+        file_put_contents($fileName, $definition->getCode());
 
-        if (file_exists($this->lastPath)){
-            require $this->lastPath;
-        }
+        require $fileName;
     }
 }

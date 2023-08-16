@@ -19,6 +19,7 @@
     <link rel="mask-icon" href="{{ asset('Icons/safari-pinned-tab.svg') }}" color="#712cf9">
     <link rel="icon" href="{{ asset('Icons/favicon.ico') }}">
     <meta name="theme-color" content="#712cf9">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/bootstrap-icons.css') }}" rel="stylesheet">
@@ -151,7 +152,6 @@
     <script src="/js/color-modes.js"></script>
     <script src="/js/projeto.js"></script>
     <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
-
     {!! Toastr::message() !!}
 </body>
 

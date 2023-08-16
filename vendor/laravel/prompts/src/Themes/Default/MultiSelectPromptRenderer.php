@@ -42,11 +42,7 @@ class MultiSelectPromptRenderer extends Renderer
                     $this->cyan($this->truncate($prompt->label, $prompt->terminal()->cols() - 6)),
                     $this->renderOptions($prompt),
                 )
-                ->when(
-                    $prompt->hint,
-                    fn () => $this->hint($prompt->hint),
-                    fn () => $this->newLine() // Space for errors
-                ),
+                ->newLine(), // Space for errors
         };
     }
 
