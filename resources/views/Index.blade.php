@@ -150,6 +150,9 @@
     <script src="/js/dashboard.js"></script>
     <script src="/js/color-modes.js"></script>
     <script src="/js/projeto.js"></script>
+    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+
+    {!! Toastr::message() !!}
 </body>
 
 </html>
