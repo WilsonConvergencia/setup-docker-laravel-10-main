@@ -39,11 +39,11 @@
                                 <td>{{ $cliente->cep }}</td>
                                 <td>{{ $cliente->bairro }}</td>
                                 <td>
-                                    <a href="{{ route('atualizar.clientes', $cliente->id) }}" class="btn btn-light btn-sm">
+                                    <a href="{{ route('atualizar.cliente', $cliente->id) }}" class="btn btn-light btn-sm">
                                         Editar
                                     </a>
                                     <meta name='csrf-token' content=" {{ csrf_token() }}" />
-                                    <a onclick="deleteRegistroPOaginacao('{{ route('clientes.delete') }}',{{ $cliente->id }})"
+                                    <a onclick="deleteRegistroPOaginacao('{{ route('cliente.delete') }}',{{ $cliente->id }})"
                                         class="btn btn-danger btn-sm">
                                         Excluir
                                     </a>
