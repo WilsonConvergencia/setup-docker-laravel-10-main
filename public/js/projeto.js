@@ -37,7 +37,7 @@ $('#cep').blur(function (){
         if(validacep.test(cep)){
             $('#logradouro').val('Buscando Dados...')
             $('#bairro').val('Buscando Dados...')
-            $('#cidade').val('Buscando Dados...')
+            $('#endereco').val('Buscando Dados...')
             $.getJSON(`https://viacep.com.br/ws/${cep}/json/?callback=?`, function(dados){
                 if(!('erro' in dados)){
                     $('#logradouro').val(dados.logradouro.toUpperCase())

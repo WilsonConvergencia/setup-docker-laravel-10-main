@@ -52,9 +52,8 @@ class ClientesController extends Controller
     public function atualizarCliente(FormRequestClientes $request, $id)
     {
         if($request->method() == "PUT"){
+            
             $data = $request->all();
-            $componentes = new Componentes();
-            $data['valor'] = $componentes->formatacaoMascaraDinheiroDecimal($data['valor']);
             $buscaRegistro = Cliente::find($id);
             $buscaRegistro->update($data);
 

@@ -27,23 +27,23 @@
                 <div class="invalid-feedback"> {{ $errors->first('cep')}}</div>
             @endif
         </div>
-        <div class="col-md-4">
-            <label class="form-label">Endereço</label>
-            <input value="{{ old('endereco') }}" class="form-control @error('endereco') is-invalid @enderror" name="endereco">
-            @if ($errors->has('endereco'))
-                <div class="invalid-feedback"> {{ $errors->first('endereco')}}</div>
-            @endif
-        </div>
-        <div class="col-md-2">
+        <div class="col-md-6">
             <label class="form-label">Logradouro</label>
-            <input value="{{ old('logradouro') }}" class="form-control @error('logradouro') is-invalid @enderror" name="logradouro">
+            <input id="logradouro" value="{{ old('logradouro') }}" class="form-control @error('logradouro') is-invalid @enderror" name="logradouro">
             @if ($errors->has('logradouro'))
                 <div class="invalid-feedback"> {{ $errors->first('logradouro')}}</div>
             @endif
         </div>
         <div class="col-md-4">
+            <label class="form-label">Endereço</label>
+            <input id="endereco" value="{{ old('endereco') }}" class="form-control @error('endereco') is-invalid @enderror" name="endereco">
+            @if ($errors->has('endereco'))
+                <div class="invalid-feedback"> {{ $errors->first('endereco')}}</div>
+            @endif
+        </div>
+        <div class="col-md-4">
             <label class="form-label">Bairro</label>
-            <input value="{{ old('bairro') }}" class="form-control @error('bairro') is-invalid @enderror" name="bairro">
+            <input id="bairro" value="{{ old('bairro') }}" class="form-control @error('bairro') is-invalid @enderror" name="bairro">
             @if ($errors->has('bairro'))
                 <div class="invalid-feedback"> {{ $errors->first('bairro')}}</div>
             @endif
