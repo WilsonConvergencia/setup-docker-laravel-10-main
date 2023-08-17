@@ -30,28 +30,24 @@ function deleteRegistroPOaginacao(rotaUrl, idDoRegistro){
 
 $('#mascara_valor').mask('#.##0,00', {reverse: true});
 
-$cep("#Cep").blur(function (){
-    var cep = $(this).val().replace(/\D/g,'');
-    if (cep != ""){
-        var validacep = /^[0-9]{8}$/;
+$('#cep').blur(function (){
+    var cep = $(this).val().replace(/\D/g, '')
+    if(cep!=''){
+        var validacep = /^[0-9]{8}$/
         if(validacep.test(cep)){
-            $("#Logradouro").val(" ");
-            $("#Bairro").val(" ");
-            $("#Cidade").val(" ");
-            $("#uf").val(" ");
-            $("#ibge").val(" ");
-            $.getJSON("https://viacep.com.br/ws/"+ cep + "/json/?callback=?", function(dados){
-                if(!("erro in dados")){
-                    $("#Logradouro").val(dados.logradouro.toUpperCase());
-                    $("#Bairro").val(dados.bairro.toUpperCase());
-                    $("#Cidade").val(dados.localidade.toUpperCase());
-                    $("#uf").val(dados.uf.toUpperCase());
-                    $("#ibge").val(dados.ibge.toUpperCase());
+            $('#logradouro').val('Buscando Dados...')
+            $('#bairro').val('Buscando Dados...')
+            $('#cidade').val('Buscando Dados...')
+            $.getJSON(`https://viacep.com.br/ws/${cep}/json/?callback=?`, function(dados){
+                if(!('erro' in dados)){
+                    $('#logradouro').val(dados.logradouro.toUpperCase())
+                    $('#bairro').val(dados.bairro.toUpperCase())
+                    $('#endereco').val(dados.localidade.toUpperCase())
+                }else{
+                    alert('CEP não encontrado')
                 }
-                else{
-                    alert("CEP não encontrado de forma automatizado digite manualmente ou tente novamente");
-                }
-            });
+            })
         }
     }
-});
+
+})
